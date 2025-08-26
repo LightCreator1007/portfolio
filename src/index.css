@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: retro --default, coffee --prefersdark;
+}
+@custom-variant dark (&:where([data-theme=coffee], [data-theme=coffee] *));
+
+html,
+body,
+.root {
+  min-height: 100vh;
+}
+
+#hero {
+  background-image: url("./src/assets/dayscape.png");
+  height: 600px;
+  color: darkorange;
+}
+
+#hero-dark {
+  background-image: url("./src/assets/nightscape.png");
+  height: 600px;
+  color: bisque;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
